@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Satoshi', 'Inter', system-ui, sans-serif;
+
+  --color-brand-bg: #091c2b;
+  --color-brand-card: #102b40;
+  --color-brand-border: #25465b;
+  --color-brand-text: #edf5f5;
+  --color-brand-muted: #a2bac9;
+  --color-brand-lime: #b5e48c;
+  --color-brand-navy: #184e77;
+  --color-brand-teal: #34a0a4;
+  --color-brand-blue-accent: #1e6091;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Glassmorphism utility */
+.glass-nav {
+  background: rgba(9, 28, 43, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(37, 70, 91, 0.5);
+}
+
+.glass-card {
+  background-color: rgba(16, 43, 64, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(37, 70, 91, 0.6);
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #091c2b;
+}
+::-webkit-scrollbar-thumb {
+  background: #25465b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34a0a4;
+}
