@@ -1,7 +1,9 @@
+export type SkillItem = string | { es: string; en: string };
+
 export interface SkillGroup {
   id: string;
   title: { es: string; en: string };
-  skills: string[];
+  skills: SkillItem[];
 }
 
 export const skillGroups: SkillGroup[] = [
@@ -15,7 +17,7 @@ export const skillGroups: SkillGroup[] = [
       'Java',
       'SOLID',
       'Clean Code',
-      'Patrones de diseño',
+      { es: 'Patrones de diseño', en: 'Design Patterns' },
       'Object Pooling',
       'State Machines',
       'Git / GitHub / GitLab'
@@ -25,14 +27,14 @@ export const skillGroups: SkillGroup[] = [
     id: 'qa',
     title: { es: 'QA & Testing', en: 'QA & Testing' },
     skills: [
-      'Reporte de bugs',
-      'Reproducción',
-      'Severidad y prioridad',
-      'Testing funcional',
-      'Testing exploratorio',
+      { es: 'Reporte de bugs', en: 'Bug Reporting' },
+      { es: 'Reproducción', en: 'Bug Reproduction' },
+      { es: 'Severidad y prioridad', en: 'Severity & Priority' },
+      { es: 'Testing funcional', en: 'Functional Testing' },
+      { es: 'Testing exploratorio', en: 'Exploratory Testing' },
       'Bug Life Cycle',
       'Logs',
-      'Depuración'
+      { es: 'Depuración', en: 'Debugging' }
     ]
   },
   {
@@ -41,26 +43,26 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       'Scrum',
       'Kanban',
-      'Planificación',
-      'Estimación',
-      'Presupuestos',
-      'Gestión de riesgos',
-      'Hitos',
+      { es: 'Planificación', en: 'Planning' },
+      { es: 'Estimación', en: 'Estimation' },
+      { es: 'Presupuestos', en: 'Budgeting' },
+      { es: 'Gestión de riesgos', en: 'Risk Management' },
+      { es: 'Hitos', en: 'Milestones' },
       'Jira',
       'ClickUp',
       'Trello',
       'Google Workspace',
-      'Documentación'
+      { es: 'Documentación', en: 'Documentation' }
     ]
   },
   {
     id: 'soft-skills',
     title: { es: 'Soft Skills', en: 'Soft Skills' },
     skills: [
-      'Comunicación asertiva',
-      'Liderazgo',
-      'Orientación al detalle',
-      'Resiliencia'
+      { es: 'Comunicación asertiva', en: 'Assertive Communication' },
+      { es: 'Liderazgo', en: 'Leadership' },
+      { es: 'Orientación al detalle', en: 'Attention to Detail' },
+      { es: 'Resiliencia', en: 'Resilience' }
     ]
   }
 ];

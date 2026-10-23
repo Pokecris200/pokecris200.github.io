@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code2, Bug, Kanban, HeartHandshake, User, Sparkles, Mail, Copy, Check } from 'lucide-react';
+import { Code2, Bug, Kanban, HeartHandshake, Sparkles, Mail, Copy, Check } from 'lucide-react';
 import { skillGroups } from '../data/skills';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -49,20 +49,22 @@ export const About: React.FC = () => {
 
         {/* Bio & Photo Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
-          {/* Photo / Avatar Placeholder */}
+          {/* Photo Container */}
           <div className="lg:col-span-4 flex justify-center">
             <div className="relative group w-64 h-80 sm:w-72 sm:h-96 rounded-2xl bg-[#102b40] border border-[#25465b] p-3 flex flex-col items-center justify-center overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.4)]">
-              {/* Inner card */}
-              <div className="w-full h-full rounded-xl border border-dashed border-[#34a0a4]/40 bg-[#091c2b]/80 flex flex-col items-center justify-center p-6 text-center">
-                <div className="w-20 h-20 rounded-full bg-[#102b40] border border-[#25465b] flex items-center justify-center mb-4 group-hover:border-[#34a0a4] transition-colors">
-                  <User className="w-10 h-10 text-[#a2bac9] group-hover:text-[#b5e48c] transition-colors" />
+              {/* Inner card with Cristian's real photo */}
+              <div className="relative w-full h-full rounded-xl overflow-hidden border border-[#25465b] group-hover:border-[#34a0a4]/60 transition-all duration-300">
+                <img
+                  src="./cristian-forero.jpg"
+                  alt="Cristian Forero"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#091c2b]/80 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-3 right-3 text-center">
+                  <span className="inline-block px-3 py-1 rounded-full bg-[#091c2b]/85 border border-[#25465b] text-xs font-heading font-medium text-[#edf5f5] backdrop-blur-md">
+                    Cristian Forero
+                  </span>
                 </div>
-                <span className="text-sm font-heading font-medium text-[#edf5f5]">
-                  {t('about.photoPlaceholder')}
-                </span>
-                <span className="text-xs text-[#a2bac9] mt-1">
-                  Cristian Forero
-                </span>
               </div>
 
               {/* Decorative accent corners */}
@@ -147,14 +149,17 @@ export const About: React.FC = () => {
 
               {/* Skills Tags */}
               <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 rounded-full text-xs font-medium bg-[#091c2b] text-[#edf5f5] border border-[#25465b] hover:border-[#b5e48c]/50 hover:text-[#b5e48c] transition-all"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {group.skills.map((skill, idx) => {
+                  const label = typeof skill === 'string' ? skill : skill[lang];
+                  return (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 rounded-full text-xs font-medium bg-[#091c2b] text-[#edf5f5] border border-[#25465b] hover:border-[#b5e48c]/50 hover:text-[#b5e48c] transition-all"
+                    >
+                      {label}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           ))}
