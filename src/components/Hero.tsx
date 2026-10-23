@@ -68,22 +68,22 @@ export const Hero: React.FC = () => {
             </a>
 
             <a
-              href="https://itch.io"
+              href="https://pokecris200.itch.io"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#102b40] border border-[#25465b] hover:border-[#b5e48c] text-xs font-medium text-[#a2bac9] hover:text-[#edf5f5] transition-all hover:-translate-y-0.5"
-              title="itch.io"
+              title="itch.io: pokecris200"
             >
               <Gamepad2 className="w-4 h-4 text-[#b5e48c]" />
               <span>itch.io</span>
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/cristiancforero/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#102b40] border border-[#25465b] hover:border-[#34a0a4] text-xs font-medium text-[#a2bac9] hover:text-[#edf5f5] transition-all hover:-translate-y-0.5"
-              title="LinkedIn"
+              title="LinkedIn: cristiancforero"
             >
               <Linkedin className="w-4 h-4 text-[#34a0a4]" />
               <span>LinkedIn</span>

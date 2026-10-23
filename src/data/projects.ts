@@ -26,7 +26,7 @@ export const projects: Project[] = [
       en: 'Space exploration game example. Replace this text with the objective, your contribution, and the project outcome.'
     },
     technologies: ['Unity 3D', 'C#', 'Física orbital', 'Shader Graph'],
-    itchUrl: 'https://itch.io',
+    itchUrl: 'https://pokecris200.itch.io',
     isPending: true,
     accentColor: '#34a0a4'
   },
@@ -41,7 +41,7 @@ export const projects: Project[] = [
       en: 'Puzzle adventure game example. A space to explain how you took an idea from prototype to final release.'
     },
     technologies: ['Unity', 'C#', 'Level Design', 'State Machine'],
-    itchUrl: 'https://itch.io',
+    itchUrl: 'https://pokecris200.itch.io',
     isPending: true,
     accentColor: '#184e77'
   },
@@ -56,7 +56,7 @@ export const projects: Project[] = [
       en: 'Movement mechanics research study. Describe the mechanic you explored and the core insights learned.'
     },
     technologies: ['Unity 2D', 'Rigidbody2D', 'Kinematics', 'C#'],
-    itchUrl: 'https://itch.io',
+    itchUrl: 'https://pokecris200.itch.io',
     isPending: true,
     accentColor: '#1a759f'
   },
@@ -71,7 +71,7 @@ export const projects: Project[] = [
       en: 'Enemy behavior experimental sandbox. Add the technical challenge, your approach, and key takeaways.'
     },
     technologies: ['Unity', 'NavMesh', 'FSM / Behaviour Trees', 'C#'],
-    itchUrl: 'https://itch.io',
+    itchUrl: 'https://pokecris200.itch.io',
     isPending: true,
     accentColor: '#25465b'
   },
@@ -86,7 +86,7 @@ export const projects: Project[] = [
       en: 'Game Jam speedrun project. Explain the theme constraints, mechanics designed, and sprint contributions.'
     },
     technologies: ['Unity', 'C#', '2D Lighting', 'Post-Processing'],
-    itchUrl: 'https://itch.io',
+    itchUrl: 'https://pokecris200.itch.io',
     isPending: true,
     accentColor: '#b5e48c'
   },
@@ -101,7 +101,7 @@ export const projects: Project[] = [
       en: 'Time-constrained game prototype. Swap this content with stories and learnings from your next jam.'
     },
     technologies: ['Unity', 'C#', 'Low Poly', 'Audio Integration'],
-    itchUrl: 'https://itch.io',
+    itchUrl: 'https://pokecris200.itch.io',
     isPending: true,
     accentColor: '#34a0a4'
   }

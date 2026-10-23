@@ -1,10 +1,17 @@
-import React from 'react';
-import { Code2, Bug, Kanban, HeartHandshake, User, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Code2, Bug, Kanban, HeartHandshake, User, Sparkles, Mail, Copy, Check } from 'lucide-react';
 import { skillGroups } from '../data/skills';
 import { useLanguage } from '../context/LanguageContext';
 
 export const About: React.FC = () => {
   const { lang, t } = useLanguage();
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('cristian.forero.dev@gmail.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2200);
+  };
 
   const getGroupIcon = (id: string) => {
     switch (id) {
@@ -77,6 +84,35 @@ export const About: React.FC = () => {
             <p className="text-base sm:text-lg text-[#a2bac9] leading-relaxed">
               {t('about.p3')}
             </p>
+
+            {/* Contact Actions */}
+            <div className="pt-3 flex flex-wrap items-center gap-3">
+              <a
+                href="mailto:cristian.forero.dev@gmail.com"
+                className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-[#34a0a4] hover:bg-[#2e8f93] text-[#091c2b] font-heading font-bold text-sm tracking-wide shadow-[0_4px_20px_rgba(52,160,164,0.3)] hover:shadow-[0_6px_25px_rgba(52,160,164,0.45)] transition-all transform hover:-translate-y-0.5 cursor-pointer"
+              >
+                <Mail className="w-4 h-4" />
+                <span>{t('about.contactButton')}</span>
+              </a>
+
+              <button
+                onClick={handleCopyEmail}
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-[#102b40] border border-[#25465b] hover:border-[#34a0a4] text-xs font-mono font-medium text-[#edf5f5] transition-all hover:-translate-y-0.5 cursor-pointer"
+                title={t('about.copyEmail')}
+              >
+                {copied ? (
+                  <>
+                    <Check className="w-4 h-4 text-[#b5e48c]" />
+                    <span className="text-[#b5e48c]">{t('about.copied')}</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4 text-[#a2bac9]" />
+                    <span>cristian.forero.dev@gmail.com</span>
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </div>
 

@@ -48,6 +48,9 @@ const translations: Record<Language, Record<string, string>> = {
     'about.photoPlaceholder': 'Tu foto aquí',
     'about.skillsTitle': 'Stack técnico y habilidades',
     'about.skillsSubtitle': 'Código, calidad, procesos y personas.',
+    'about.contactButton': 'Enviar correo',
+    'about.copied': '¡Copiado al portapapeles!',
+    'about.copyEmail': 'Copiar correo',
 
     // Footer
     'footer.copyright': '© 2026 Cristian Forero',
@@ -91,6 +94,9 @@ const translations: Record<Language, Record<string, string>> = {
     'about.photoPlaceholder': 'Your photo here',
     'about.skillsTitle': 'Technical stack & skill matrix',
     'about.skillsSubtitle': 'Code, quality, processes, and people.',
+    'about.contactButton': 'Send email',
+    'about.copied': 'Copied to clipboard!',
+    'about.copyEmail': 'Copy email',
 
     // Footer
     'footer.copyright': '© 2026 Cristian Forero',
