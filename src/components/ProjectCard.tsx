@@ -22,35 +22,57 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     >
       {/* Card Header / Thumbnail Area */}
       <div className="relative aspect-[16/10] w-full p-4 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-[#184e77]/40 via-[#102b40] to-[#091c2b]">
-        {/* Subtle decorative grid/glow */}
-        <div
-          className="absolute inset-0 opacity-20 pointer-events-none group-hover:opacity-30 transition-opacity"
-          style={{
-            backgroundImage: `radial-gradient(rgba(52, 160, 164, 0.5) 1px, transparent 1px)`,
-            backgroundSize: '18px 18px'
-          }}
-        />
+        {/* Project Cover Image (if provided) */}
+        {project.imageUrl ? (
+          <>
+            <img
+              src={project.imageUrl}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+            />
+            {/* Dark gradient overlay for badge readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#091c2b] via-[#091c2b]/40 to-black/60 pointer-events-none" />
+          </>
+        ) : (
+          /* Subtle decorative grid/glow for placeholder */
+          <div
+            className="absolute inset-0 opacity-20 pointer-events-none group-hover:opacity-30 transition-opacity"
+            style={{
+              backgroundImage: `radial-gradient(rgba(52, 160, 164, 0.5) 1px, transparent 1px)`,
+              backgroundSize: '18px 18px'
+            }}
+          />
+        )}
 
         <div className="relative z-10 flex items-center justify-between">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#091c2b]/80 border border-[#25465b] text-[10px] font-mono tracking-wider text-[#b5e48c] uppercase backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#b5e48c]" />
-            {t('portfolio.exampleBadge')}
-          </span>
+          {!project.isPending ? (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#091c2b]/85 border border-[#34a0a4]/50 text-[10px] font-mono tracking-wider text-[#b5e48c] uppercase backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#b5e48c]" />
+              {project.categoryLabel[lang]}
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#091c2b]/80 border border-[#25465b] text-[10px] font-mono tracking-wider text-[#b5e48c] uppercase backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#b5e48c]" />
+              {t('portfolio.exampleBadge')}
+            </span>
+          )}
 
-          <span className="text-[10px] font-mono text-[#a2bac9]/70 tracking-wider uppercase">
-            {project.categoryLabel[lang]}
-          </span>
-        </div>
-
-        {/* Center Artwork / Graphic */}
-        <div className="relative z-10 my-auto flex flex-col items-center justify-center text-center py-4">
-          <div className="w-16 h-16 rounded-2xl bg-[#091c2b]/70 border border-[#34a0a4]/30 flex items-center justify-center shadow-inner group-hover:scale-105 group-hover:border-[#34a0a4] transition-all">
-            <Gamepad2 className="w-8 h-8 text-[#34a0a4] group-hover:text-[#b5e48c] transition-colors" />
-          </div>
-          <span className="mt-2 text-[10px] font-mono tracking-wider text-[#a2bac9] uppercase opacity-80">
+          <span className="text-[10px] font-mono text-[#a2bac9] tracking-wider uppercase drop-shadow">
             {project.tagline[lang]}
           </span>
         </div>
+
+        {/* Center Artwork only for projects without imageUrl */}
+        {!project.imageUrl && (
+          <div className="relative z-10 my-auto flex flex-col items-center justify-center text-center py-4">
+            <div className="w-16 h-16 rounded-2xl bg-[#091c2b]/70 border border-[#34a0a4]/30 flex items-center justify-center shadow-inner group-hover:scale-105 group-hover:border-[#34a0a4] transition-all">
+              <Gamepad2 className="w-8 h-8 text-[#34a0a4] group-hover:text-[#b5e48c] transition-colors" />
+            </div>
+            <span className="mt-2 text-[10px] font-mono tracking-wider text-[#a2bac9] uppercase opacity-80">
+              {project.tagline[lang]}
+            </span>
+          </div>
+        )}
 
         {/* Bottom subtle glow line */}
         <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#25465b] to-transparent group-hover:via-[#34a0a4] transition-colors" />

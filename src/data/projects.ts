@@ -12,6 +12,7 @@ export interface Project {
   githubUrl?: string;
   isPending?: boolean;
   accentColor?: string;
+  imageUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -76,18 +77,19 @@ export const projects: Project[] = [
     accentColor: '#25465b'
   },
   {
-    id: 'last-light',
-    title: 'Last Light',
+    id: 'nostalgia-invaders',
+    title: 'Nostalgia Invaders',
     category: 'game-jams',
     categoryLabel: { es: 'Game Jams', en: 'Game Jams' },
-    tagline: { es: 'GLOBAL GAME JAM / 48H', en: 'GLOBAL GAME JAM / 48H' },
+    tagline: { es: 'GAME JAM / ACCIÓN RETRO', en: 'GAME JAM / RETRO ACTION' },
     description: {
-      es: 'Ejemplo de proyecto de Game Jam. Cuenta el tema, las limitaciones y tu aportación durante el desarrollo.',
-      en: 'Game Jam speedrun project. Explain the theme constraints, mechanics designed, and sprint contributions.'
+      es: 'Un homenaje a los recuerdos y juegos de infancia: conduce tu Tron Bike y dispara bolas de Pac-Man para enfrentar al gran Dios Cthulhu en un shooter de acción trepidante.',
+      en: 'A tribute to childhood memories and classics: ride your Tron Bike and shoot Pac-Man pellets to battle the mighty God Cthulhu in a fast-paced retro arcade shooter.'
     },
-    technologies: ['Unity', 'C#', '2D Lighting', 'Post-Processing'],
-    itchUrl: 'https://pokecris200.itch.io',
-    isPending: true,
+    technologies: ['Unity', 'C#', '2D Gameplay', 'Retro Arcade', 'Game Jam'],
+    itchUrl: 'https://pokecris200.itch.io/nostalgia-invaders',
+    isPending: false,
+    imageUrl: './projects/nostalgia-invaders.png',
     accentColor: '#b5e48c'
   },
   {

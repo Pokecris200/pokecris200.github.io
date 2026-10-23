@@ -61,11 +61,9 @@ export const Navbar: React.FC = () => {
           {/* CV & Language */}
           <div className="flex items-center gap-3">
             <a
-              href="#cv"
-              onClick={(e) => {
-                e.preventDefault();
-                alert(lang === 'es' ? 'El currículum estará disponible para descarga en breve.' : 'Resume download will be available shortly.');
-              }}
+              href="https://drive.google.com/file/d/1HNvP9TJ4lcx023m4iY0MdPBZWth4ABP3/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-[#edf5f5] bg-[#102b40] border border-[#25465b] hover:border-[#34a0a4] hover:bg-[#184e77]/40 transition-all cursor-pointer"
             >
               <FileText className="w-3.5 h-3.5 text-[#34a0a4]" />
@@ -120,16 +118,16 @@ export const Navbar: React.FC = () => {
             ))}
           </ul>
           <div className="pt-2 flex items-center gap-3">
-            <button
-              onClick={() => {
-                alert(lang === 'es' ? 'El currículum estará disponible para descarga en breve.' : 'Resume download will be available shortly.');
-                setMobileMenuOpen(false);
-              }}
-              className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#102b40] border border-[#25465b] text-sm font-medium text-[#edf5f5]"
+            <a
+              href="https://drive.google.com/file/d/1HNvP9TJ4lcx023m4iY0MdPBZWth4ABP3/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#102b40] border border-[#25465b] text-sm font-medium text-[#edf5f5] hover:border-[#34a0a4]"
             >
               <FileText className="w-4 h-4 text-[#34a0a4]" />
               {t('nav.cv')}
-            </button>
+            </a>
           </div>
         </div>
       )}
