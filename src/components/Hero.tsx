@@ -43,8 +43,8 @@ export const Hero: React.FC = () => {
             {t('hero.intro')}
           </p>
 
-          {/* Action Button & Social Links */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          {/* Main Action Button */}
+          <div className="pt-2">
             <a
               href="#portafolio"
               className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#34a0a4] hover:bg-[#2e8f93] text-[#091c2b] font-heading font-bold text-sm tracking-wide shadow-[0_4px_20px_rgba(52,160,164,0.3)] hover:shadow-[0_6px_25px_rgba(52,160,164,0.45)] transition-all transform hover:-translate-y-0.5 cursor-pointer"
@@ -52,40 +52,42 @@ export const Hero: React.FC = () => {
               <span>{t('hero.viewPortfolio')}</span>
               <ArrowDown className="w-4 h-4" />
             </a>
+          </div>
 
-            {/* Social pills */}
-            <div className="flex items-center gap-2">
-              <a
-                href="https://github.com/pokecris200"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-[#102b40] border border-[#25465b] hover:border-[#34a0a4] text-[#a2bac9] hover:text-[#edf5f5] transition-all hover:-translate-y-0.5"
-                title="GitHub: pokecris200"
-              >
-                <Github className="w-4 h-4" />
-              </a>
+          {/* Social Profiles Row (Below main CTA) */}
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="https://github.com/pokecris200"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#102b40] border border-[#25465b] hover:border-[#34a0a4] text-xs font-medium text-[#a2bac9] hover:text-[#edf5f5] transition-all hover:-translate-y-0.5"
+              title="GitHub: pokecris200"
+            >
+              <Github className="w-4 h-4 text-[#edf5f5]" />
+              <span>GitHub</span>
+            </a>
 
-              <a
-                href="https://itch.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-[#102b40] border border-[#25465b] hover:border-[#b5e48c] text-xs font-medium text-[#a2bac9] hover:text-[#edf5f5] transition-all hover:-translate-y-0.5"
-                title="itch.io"
-              >
-                <Gamepad2 className="w-4 h-4 text-[#b5e48c]" />
-                <span>itch.io</span>
-              </a>
+            <a
+              href="https://itch.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#102b40] border border-[#25465b] hover:border-[#b5e48c] text-xs font-medium text-[#a2bac9] hover:text-[#edf5f5] transition-all hover:-translate-y-0.5"
+              title="itch.io"
+            >
+              <Gamepad2 className="w-4 h-4 text-[#b5e48c]" />
+              <span>itch.io</span>
+            </a>
 
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-[#102b40] border border-[#25465b] hover:border-[#34a0a4] text-[#a2bac9] hover:text-[#edf5f5] transition-all hover:-translate-y-0.5"
-                title="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-            </div>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#102b40] border border-[#25465b] hover:border-[#34a0a4] text-xs font-medium text-[#a2bac9] hover:text-[#edf5f5] transition-all hover:-translate-y-0.5"
+              title="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4 text-[#34a0a4]" />
+              <span>LinkedIn</span>
+            </a>
           </div>
         </motion.div>
 
