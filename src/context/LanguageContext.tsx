@@ -30,7 +30,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Portfolio
     'portfolio.index': '01 / PORTAFOLIO',
     'portfolio.title': 'Juegos, ideas y experimentos.',
-    'portfolio.subtitle': 'De la primera mecánica al juego terminado. Los proyectos que ves aquí son ejemplos para presentar la estructura.',
+    'portfolio.subtitle': 'De la primera mecánica al juego terminado. Proyectos desarrollados con pasión, arquitectura sólida en Unity y mecánicas jugables optimizadas.',
     'portfolio.tab.all': 'Todos',
     'portfolio.tab.complete': 'Completos',
     'portfolio.tab.learning': 'Aprendizaje',
@@ -38,6 +38,8 @@ const translations: Record<Language, Record<string, string>> = {
     'portfolio.itchLink': 'Ver en itch.io',
     'portfolio.pendingLink': 'Enlace pendiente',
     'portfolio.exampleBadge': 'EJEMPLO',
+    'portfolio.emptyTitle': 'Próximamente nuevos proyectos en esta sección',
+    'portfolio.emptySubtitle': 'Actualmente preparando y documentando nuevos desarrollos para esta categoría.',
 
     // About
     'about.index': '02 / SOBRE MÍ',
@@ -76,7 +78,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Portfolio
     'portfolio.index': '01 / PORTFOLIO',
     'portfolio.title': 'Games, ideas & experiments.',
-    'portfolio.subtitle': 'From the initial mechanic to the finished game. The projects shown here serve as a showcase of structure and pipeline.',
+    'portfolio.subtitle': 'From core mechanics to finished games. Projects developed with passion, solid Unity architecture, and responsive gameplay.',
     'portfolio.tab.all': 'All',
     'portfolio.tab.complete': 'Complete',
     'portfolio.tab.learning': 'Learning',
@@ -84,6 +86,8 @@ const translations: Record<Language, Record<string, string>> = {
     'portfolio.itchLink': 'View on itch.io',
     'portfolio.pendingLink': 'Link pending',
     'portfolio.exampleBadge': 'EXAMPLE',
+    'portfolio.emptyTitle': 'New projects coming soon in this section',
+    'portfolio.emptySubtitle': 'Currently preparing and documenting new developments for this category.',
 
     // About
     'about.index': '02 / ABOUT ME',

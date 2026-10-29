@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Gamepad2 } from 'lucide-react';
 import { projects, ProjectCategory } from '../data/projects';
 import { ProjectCard } from './ProjectCard';
 import { useLanguage } from '../context/LanguageContext';
@@ -70,14 +71,32 @@ export const Portfolio: React.FC = () => {
           })}
         </div>
 
-        {/* Projects Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {/* Projects Grid or Empty State */}
+        {filteredProjects.length > 0 ? (
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <AnimatePresence mode="popLayout">
+              {filteredProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="py-16 px-6 rounded-2xl bg-[#102b40]/40 border border-[#25465b]/50 text-center flex flex-col items-center justify-center gap-3"
+          >
+            <div className="w-12 h-12 rounded-xl bg-[#091c2b] border border-[#25465b] flex items-center justify-center shadow-inner">
+              <Gamepad2 className="w-6 h-6 text-[#34a0a4]" />
+            </div>
+            <p className="text-base font-heading font-semibold text-[#edf5f5]">
+              {t('portfolio.emptyTitle')}
+            </p>
+            <p className="text-xs text-[#a2bac9] max-w-sm leading-relaxed">
+              {t('portfolio.emptySubtitle')}
+            </p>
+          </motion.div>
+        )}
       </div>
     </section>
   );

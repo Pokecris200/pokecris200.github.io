@@ -17,66 +17,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'orbital',
-    title: 'Orbital',
-    category: 'completos',
-    categoryLabel: { es: 'Proyectos completos', en: 'Complete Projects' },
-    tagline: { es: 'EJEMPLO / PORTADA PROVISIONAL', en: 'EXAMPLE / PLACEHOLDER COVER' },
-    description: {
-      es: 'Ejemplo de juego de exploración. Sustituye este texto por el objetivo, tu contribución y el resultado del proyecto.',
-      en: 'Space exploration game example. Replace this text with the objective, your contribution, and the project outcome.'
-    },
-    technologies: ['Unity 3D', 'C#', 'Física orbital', 'Shader Graph'],
-    itchUrl: 'https://pokecris200.itch.io',
-    isPending: true,
-    accentColor: '#34a0a4'
-  },
-  {
-    id: 'echo-valley',
-    title: 'Echo Valley',
-    category: 'completos',
-    categoryLabel: { es: 'Proyectos completos', en: 'Complete Projects' },
-    tagline: { es: 'EJEMPLO / PORTADA PROVISIONAL', en: 'EXAMPLE / PLACEHOLDER COVER' },
-    description: {
-      es: 'Ejemplo de aventura de puzles. Un espacio para contar cómo llevaste una idea desde el prototipo hasta su versión final.',
-      en: 'Puzzle adventure game example. A space to explain how you took an idea from prototype to final release.'
-    },
-    technologies: ['Unity', 'C#', 'Level Design', 'State Machine'],
-    itchUrl: 'https://pokecris200.itch.io',
-    isPending: true,
-    accentColor: '#184e77'
-  },
-  {
-    id: 'movimiento-2d',
-    title: 'Movimiento 2D',
-    category: 'aprendizaje',
-    categoryLabel: { es: 'Proyectos de aprendizaje', en: 'Learning Projects' },
-    tagline: { es: 'ESTUDIO DE FÍSICAS', en: 'PHYSICS STUDY' },
-    description: {
-      es: 'Ejemplo de estudio de movimiento. Describe aquí la mecánica que exploraste y qué aprendiste al desarrollarla.',
-      en: 'Movement mechanics research study. Describe the mechanic you explored and the core insights learned.'
-    },
-    technologies: ['Unity 2D', 'Rigidbody2D', 'Kinematics', 'C#'],
-    itchUrl: 'https://pokecris200.itch.io',
-    isPending: true,
-    accentColor: '#1a759f'
-  },
-  {
-    id: 'ia-enemigos',
-    title: 'IA de enemigos',
-    category: 'aprendizaje',
-    categoryLabel: { es: 'Proyectos de aprendizaje', en: 'Learning Projects' },
-    tagline: { es: 'COMPORTAMIENTO Y PATRONES', en: 'BEHAVIORS & PATTERNS' },
-    description: {
-      es: 'Ejemplo de experimento con comportamientos. Añade el reto técnico, tu enfoque y los aprendizajes del proceso.',
-      en: 'Enemy behavior experimental sandbox. Add the technical challenge, your approach, and key takeaways.'
-    },
-    technologies: ['Unity', 'NavMesh', 'FSM / Behaviour Trees', 'C#'],
-    itchUrl: 'https://pokecris200.itch.io',
-    isPending: true,
-    accentColor: '#25465b'
-  },
-  {
     id: 'la-peor-noche-del-campamento',
     title: 'La peor noche del campamento',
     category: 'game-jams',
