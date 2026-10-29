@@ -77,6 +77,22 @@ export const projects: Project[] = [
     accentColor: '#25465b'
   },
   {
+    id: 'la-peor-noche-del-campamento',
+    title: 'La peor noche del campamento',
+    category: 'game-jams',
+    categoryLabel: { es: 'Game Jams', en: 'Game Jams' },
+    tagline: { es: 'GAME JAM / COMBATE 3D Y SUPERVIVENCIA', en: 'GAME JAM / 3D COMBAT & SURVIVAL' },
+    description: {
+      es: 'Juego de combate 3D en tercera persona desarrollado en Game Jam. Encarna a un campista armado con una sartén y acompañado por su amiga ardilla para detener un ritual oscuro antes del amanecer.',
+      en: 'Third-person 3D action combat Game Jam project. Play as a camper armed with a sturdy frying pan and a squirrel companion to disrupt an occult ritual before sunrise.'
+    },
+    technologies: ['Unity 3D', 'C#', 'Third-Person Combat', 'AI Behaviors', 'PM & Integration'],
+    itchUrl: 'https://holamijo.itch.io/la-peor-noche-del-campamento',
+    isPending: false,
+    imageUrl: './projects/la-peor-noche-del-campamento.png',
+    accentColor: '#34a0a4'
+  },
+  {
     id: 'nostalgia-invaders',
     title: 'Nostalgia Invaders',
     category: 'game-jams',
@@ -93,18 +109,19 @@ export const projects: Project[] = [
     accentColor: '#b5e48c'
   },
   {
-    id: 'tiny-worlds',
-    title: 'Tiny Worlds',
+    id: 'noend-colombia',
+    title: 'NoEnd Colombia',
     category: 'game-jams',
     categoryLabel: { es: 'Game Jams', en: 'Game Jams' },
-    tagline: { es: 'LUDUM DARE / PROTOTIPO', en: 'LUDUM DARE / PROTOTYPE' },
+    tagline: { es: 'GAME JAM / ROGUELITE RUNNER', en: 'GAME JAM / ROGUELITE RUNNER' },
     description: {
-      es: 'Ejemplo de juego creado con tiempo limitado. Sustituye este contenido por la experiencia de tu próxima jam.',
-      en: 'Time-constrained game prototype. Swap this content with stories and learnings from your next jam.'
+      es: 'Roguelite endless runner vertical de ritmo rápido creado para Game Jam. Desciende a las profundidades del abismo, derrota hordas de enemigos y sobrevive para batir tu récord.',
+      en: 'Fast-paced vertical roguelite endless runner created for a Game Jam. Descend into the depths of the abyss, defeat waves of enemies, and survive to beat your high score.'
     },
-    technologies: ['Unity', 'C#', 'Low Poly', 'Audio Integration'],
-    itchUrl: 'https://pokecris200.itch.io',
-    isPending: true,
-    accentColor: '#34a0a4'
+    technologies: ['Unity', 'C#', 'Roguelite', 'Endless Runner', 'Procedural Generation'],
+    itchUrl: 'https://hamsoft23.itch.io/noend-colombia',
+    isPending: false,
+    imageUrl: './projects/noend-colombia.png',
+    accentColor: '#184e77'
   }
 ];
