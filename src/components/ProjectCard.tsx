@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Gamepad2 } from 'lucide-react';
+import { ExternalLink, Gamepad2, Zap } from 'lucide-react';
 import { Project } from '../data/projects';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -18,7 +18,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.4 }}
-      className="group relative flex flex-col rounded-2xl bg-[#102b40]/60 border border-[#25465b] hover:border-[#34a0a4]/60 transition-all duration-300 overflow-hidden hover:shadow-[0_12px_32px_rgba(0,0,0,0.4)] hover:-translate-y-1"
+      className="group relative flex flex-col rounded-2xl bg-[#102b40]/60 border border-[#25465b] hover:border-[#34a0a4]/60 transition-all duration-300 overflow-hidden hover:shadow-[0_16px_36px_rgba(0,0,0,0.45)] hover:-translate-y-1.5"
     >
       {/* Card Header / Thumbnail Area */}
       <div className="relative aspect-[16/10] w-full p-4 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-[#184e77]/40 via-[#102b40] to-[#091c2b]">
@@ -79,14 +79,27 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
 
       {/* Card Body */}
-      <div className="p-6 flex flex-col flex-1 justify-between gap-4">
-        <div className="flex flex-col gap-2">
+      <div className="p-6 flex flex-col flex-1 justify-between gap-5">
+        <div className="flex flex-col gap-3">
           <h3 className="text-xl font-heading font-bold text-[#edf5f5] group-hover:text-[#b5e48c] transition-colors">
             {project.title}
           </h3>
-          <p className="text-sm text-[#a2bac9] leading-relaxed line-clamp-3">
+          <p className="text-sm text-[#a2bac9] leading-relaxed">
             {project.description[lang]}
           </p>
+
+          {/* Technical Challenge Callout */}
+          {project.challenge && (
+            <div className="mt-1 p-3.5 rounded-xl bg-[#091c2b]/85 border border-[#25465b] group-hover:border-[#34a0a4]/40 transition-colors flex flex-col gap-1.5 shadow-inner">
+              <div className="flex items-center gap-1.5 text-[11px] font-mono font-semibold uppercase tracking-wider text-[#b5e48c]">
+                <Zap className="w-3.5 h-3.5 text-[#34a0a4] shrink-0" />
+                <span>{t('portfolio.challengeTitle')}</span>
+              </div>
+              <p className="text-xs text-[#cadbe6] leading-relaxed">
+                {project.challenge[lang]}
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="flex flex-col gap-4 pt-2">
@@ -103,7 +116,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
 
           {/* Action button */}
-          <div className="pt-2 border-t border-[#25465b]/50 flex items-center justify-between">
+          <div className="pt-3 border-t border-[#25465b]/50 flex items-center justify-between">
             <a
               href={project.itchUrl || '#'}
               target="_blank"
