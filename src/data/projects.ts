@@ -18,6 +18,26 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'el-silbido-del-mohan',
+    title: 'El Silbido del Mohán',
+    category: 'game-jams',
+    categoryLabel: { es: 'Game Jams', en: 'Game Jams' },
+    tagline: { es: 'GAME JAM / AVENTURA Y FOLCLORE', en: 'GAME JAM / FOLKLORE ADVENTURE' },
+    description: {
+      es: 'Aventura 2D en pixel art inspirada en el folclore colombiano, desarrollada para Game Jam. Cambia de plano con tu amuleto, recolecta las ofrendas sagradas y escapa a tiempo de los dominios del mítico Mohán.',
+      en: '2D pixel art adventure inspired by Colombian folklore, created for a Game Jam. Shift between realms using your amulet, gather sacred offerings, and escape the mythical Mohán’s domain in time.'
+    },
+    challenge: {
+      es: 'Diseño e implementación de sistemas de audio dinámicos y adaptativos para evitar que el juego se sintiera repetitivo: se integró música reactiva que cambia según la fase de la partida junto con efectos de sonido (SFX) aleatorios para enriquecer la inmersión.',
+      en: 'Design and implementation of dynamic, adaptive audio systems to avoid repetition: integrated reactive music that shifts dynamically with each game phase alongside randomized sound effects (SFX) to heighten atmosphere and immersion.'
+    },
+    technologies: ['Unity 2D', 'C#', 'Dynamic Audio', 'Adaptive Music', 'Randomized SFX', 'Game Jam'],
+    itchUrl: 'https://pokecris200.itch.io/el-silbido-del-mohan',
+    isPending: false,
+    imageUrl: './projects/el-silbido-del-mohan.png',
+    accentColor: '#34a0a4'
+  },
+  {
     id: 'la-peor-noche-del-campamento',
     title: 'La peor noche del campamento',
     category: 'game-jams',
